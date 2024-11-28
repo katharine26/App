@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/galleryFragment">
+    <fragment
+        android:id="@+id/galleryFragment"
+        android:name="com.example.drawingapp.GalleryFragment"
+        android:label="fragment_gallery"
+        tools:layout="@layout/fragment_gallery" >
+        <action
+            android:id="@+id/action_galleryFragment_to_entireDrawingScreenFragment"
+            app:destination="@id/entireDrawingScreenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/entireDrawingScreenFragment"
+        android:name="com.example.drawingapp.EntireDrawingScreenFragment"
+        android:label="fragment_entire_drawing_screen"
+        tools:layout="@layout/fragment_entire_drawing_screen" >
+        <action
+            android:id="@+id/action_entireDrawingScreenFragment_to_canvasFragment"
+            app:destination="@id/canvasFragment" />
+        <action
+            android:id="@+id/action_entireDrawingScreenFragment_to_toolsFragment"
+            app:destination="@id/toolsFragment" />
+        <action
+            android:id="@+id/action_entireDrawingScreenFragment_to_galleryFragment"
+            app:destination="@id/galleryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/canvasFragment"
+        android:name="com.example.drawingapp.CanvasFragment"
+        android:label="fragment_canvas"
+        tools:layout="@layout/fragment_canvas" />
+    <fragment
+        android:id="@+id/toolsFragment"
+        android:name="com.example.drawingapp.ToolsFragment"
+        android:label="fragment_tools"
+        tools:layout="@layout/fragment_tools" />
+</navigation>
